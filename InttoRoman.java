@@ -6,15 +6,15 @@ class Solution {
             "L", "XL", "X", "IX", "V", "IV", "I"
         };
 
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < values.length; i++) {
             while (num >= values[i]) {
-                result += symbols[i];
+                result.append(symbols[i]);
                 num -= values[i];
             }
         }
 
-        return result;
+        return result.toString();
     }
 }
